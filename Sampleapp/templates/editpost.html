@@ -1,0 +1,18 @@
+{% extends "internal.html" %}
+{% block top %}
+Welcome!! You are in MongoDB Page!!
+{% endblock %}
+{% block mongodbactive %}class = "active"{% endblock %}
+{% block content %}
+<h1>Edit Item</h1>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ item[1] }}" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" required>{{ item[2] }}</textarea>
+    <br>
+    <input type="submit" value="Save">
+</form>
+
+{% endblock %}

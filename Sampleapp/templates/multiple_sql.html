@@ -1,0 +1,26 @@
+{% extends "internal.html" %}
+{% block top %}
+Welcome!! You are in Multiple SQL Page!!
+{% endblock %}
+{% block muliplesqlactive %}class="active"{% endblock %}
+{% block content %}
+    <h1>Account List</h1>
+    <ul>
+        {% for account in accounts %}
+            <li>{{ account.id }} - {{ account.firstname }} - {{ account.lastname }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Add New Account</h2>
+    <form method="POST" action="/add_userdetails">
+        <label for="id">ID:</label>
+        <input type="number" name="id" required><br>
+
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" required><br>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" required><br>
+
+        <input type="submit" value="Add Account">
+    </form>
+{% endblock %} 

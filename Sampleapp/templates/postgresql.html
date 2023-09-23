@@ -1,0 +1,28 @@
+{% extends "internal.html" %}
+{% block top %}
+Welcome!! You are in PostgreSql Page!!
+{% endblock %}
+{% block postgresqlactive %}class = "active"{% endblock %}
+{% block content %}
+
+<div class="msg">{{ msg }}</div> 
+<h1>Todo List</h1>
+    <form action="/add_post" method="POST">
+        <input type="text" name="task" placeholder="Add a task" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task[1] }}
+                <form action="/update_post/{{ task[0] }}" method="POST">
+                    <input type="checkbox" name="completed" {% if task[2] %}checked{% endif %}>
+                    <button type="submit">Update</button>
+                </form>
+                <a href="/delete_post/{{ task[0] }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

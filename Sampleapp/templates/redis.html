@@ -1,0 +1,40 @@
+{% extends "internal.html" %}
+{% block top %}
+Welcome!! You are in Redis Page!!
+{% endblock %}
+{% block redisactive %}class = "active"{% endblock %}
+{% block content %}
+    <h1>Redis Template</h1>
+
+    <h2>Create Data</h2>
+    <form action="/redis_create" method="post">
+        Key: <input type="text" name="key"><br>
+        Value: <input type="text" name="value"><br>
+        <input type="submit" value="Create">
+    </form>
+
+    <h2>Read Data</h2>
+<form action="/redis_read" method="get">
+    Key: <input type="text" name="key"><br>
+    <input type="submit" value="Read">
+</form>
+    {% if value %}
+    <p>Value: {{ value }}</p>
+    {% endif %}
+
+    <h2>Update Data</h2>
+    <form action="/redis_update" method="post">
+        Key: <input type="text" name="key"><br>
+        New Value: <input type="text" name="new_value"><br>
+        <input type="submit" value="Update">
+    </form>
+
+    <h2>Delete Data</h2>
+    <form action="/redis_delete" method="post">
+        Key: <input type="text" name="key"><br>
+        <input type="submit" value="Delete">
+    </form>
+
+
+
+{% endblock %}

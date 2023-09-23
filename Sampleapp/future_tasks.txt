@@ -1,0 +1,8 @@
+1) HTTP Page : All four GET, POST, PUT, DELETE
+2) MySQL Page 
+3) Multiple Page 
+4) Create readme for all database setup
+5) Separate page for 3 types of mysql connections
+
+
+

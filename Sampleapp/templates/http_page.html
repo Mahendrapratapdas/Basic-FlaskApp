@@ -1,0 +1,30 @@
+{% extends "internal.html" %}
+{% block top %}
+Welcome!! You are in HTTP Page!!
+{% endblock %}
+{% block httpactive %}class = "active"{% endblock %}
+{% block content %}
+    <div class="msg">{{ msg }}</div>
+    <h1>HTTP Methods Example</h1>
+
+    <!-- <h2>GET Request</h2>
+    <p>This is a GET request example.</p><br><br><br>
+
+    <form method="POST" action="/http_post">
+        <h2>POST Request</h2>
+        <p>This a POST request example.</p>
+        <input type="submit" value="Submit POST">
+    </form><br><br><br>
+
+    <form method="PUT" action="/http_put">
+        <h2>PUT Request</h2>
+        <p>This is a PUT request example.</p>
+        <input type="submit" value="Submit PUT">
+    </form><br><br><br>
+
+    <form method="DELETE" action="/http_delete">
+        <h2>DELETE Request</h2>
+        <p>This is a DELETE request example.</p>
+        <input type="submit" value="Submit DELETE">
+    </form><br><br><br> -->
+{% endblock %} 
